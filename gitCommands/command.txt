@@ -34,8 +34,13 @@
 
 20.git checkout -b dev 这条的意思是说创建一个dev的分支并且切换到这个分支
 21.git branch -d dev 删除分支
-22.git merge <branchname> 合并某分支到当前分支
+22.git merge <branchname> 合并某分支到当前分支 , 在merge的时候，如果两个分支相同文件有不同的新内容，就会
+	造成冲突，打开冲突的文件，解决冲突，然后再add后commit解决问题后就自动合并了。
+	此时的原理是在master上又添加了一个新的commit，然后HEAD指向了那个位置，另一个分支的冲突文件的内容
+	是不会改变的，需要将master分支的内同merge到该分支后，才会同步，不过一般没有这个必要。
 23.git branch -d <branchname> 删除某分支
+
+
 
 
 		
