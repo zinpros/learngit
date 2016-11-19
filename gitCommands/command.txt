@@ -1,0 +1,23 @@
+﻿1.git status 状态
+2.git add [file] 将文件提交到暂存区
+3.git commit -m "" 提交文件并且添加评论
+4.git reset -hard [HARD^][VERSIONID]
+5.git log --pretty=oneline
+6.git reflog
+7.git diff [file] 可以查看文件
+
+8.git checkout -- [file] 这个命令可以回复到上一个你add或commit时的状态，有两种情况
+	1>.你修改了文件的内容，还没有add到暂存区。这个时候使用checkout可以使文件恢复到上一次commit的状态。
+	2>.你修改了文件的内容，你上一次将这个文件作修改放到了暂存区还没有提交，这个时候会恢复到你上次提交到暂存区的状态。
+9.git reset HEAD [file] 这个命令，总的来说就是把在暂存区发回，然后可以通过上一个checkout的命令来恢复内容
+10.git reset hisId [file] 回退到某个版本	
+
+11.git rm [file] 这个命令相当于rm 一个文件后 add 到了暂存区，就是 rm file，然后 git add [file],在没commit之前都可以
+	通过git chekcout -- file 和 git reset HEAD file 等命令来做还原。若是已经提交到了版本库，那就只有
+	git reset 版本号 [file] 这样来恢复文件了
+	
+	
+12.生成ssh公钥密钥的命令
+	ssh-keygen -t rsa -C "youremail@example.com"
+	会在用户主目录中找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key密钥对，id_rsa
+	是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人
