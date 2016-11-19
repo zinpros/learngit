@@ -40,6 +40,16 @@
 	是不会改变的，需要将master分支的内同merge到该分支后，才会同步，不过一般没有这个必要。
 23.git branch -d <branchname> 删除某分支
 
+24.git stash 将还没有add和commit的文件保存起来，同时清空暂存区，git status会没有内容
+25.git stash apply 将stash中的内容提取出来，不清空stash
+26.git stash list 查看stash中的内容
+27.git stash pop 将stash中的内同提取出来，清空stash
+
+28.删除一个分支 git branch -d <name>
+29.强行删除一个分支 git branch -D <name>
+
+30.git remote -v 查看关联的远程库
+
 
 
 
