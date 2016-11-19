@@ -21,3 +21,16 @@
 	ssh-keygen -t rsa -C "youremail@example.com"
 	会在用户主目录中找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key密钥对，id_rsa
 	是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人
+13.git remote add <reponame> [仓库地址] 将本地的仓库和远程仓库关联起来，仓库地址可以是SSH，HTTPS等协议
+14.git remote rm <reponame> 可以删除与本地仓库关联的远程仓库(仅仅是删除关系)
+15.git push origin :<reponame> 可以远程删除分支,但不能是默认分支,注意冒号后面不可以有空格。
+	这个命令的意思是推送一个空的分支到该分支上，就是删除该分支。
+	正常的删除命令是 git push <reponame> --delete <branchName>
+
+16.git branch <reponame> 创建一个新的分支
+17.git branch -m <oriname> <targetname> 重命名一个分支
+18.git push <remoterepo> <remotebranch>若是这个remotebranch不存在就会自动创建一个
+19.git branch --delete <branchname>可以删除一个本地的分支
+
+
+		
